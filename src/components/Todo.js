@@ -19,13 +19,10 @@ const Todo = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setValues((prev) => ({
-      id: uniqid(),
-      todo: todo,
-    }))
 
     const moto = {
       id: uniqid(),
+      status: false,
       todo: todo,
     }
     dispatch(addTodo(moto))

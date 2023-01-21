@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.todo_div {
+  border-radius: 16px;
+  padding: 6px;
+  background: #002500;
+  color: #fff;
+  margin-bottom: 1.6%;
+  display: flex;
+  justify-content: space-around;
+}
