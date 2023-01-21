@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { RiDeleteBinLine } from "react-icons/ri";
 
 const Item = ({ id, kazi}) => {
   return (
@@ -6,7 +7,7 @@ const Item = ({ id, kazi}) => {
       <div>
         <input type="checkbox" name="check" id="" />
         <p>{ kazi }</p>
-        
+        <RiDeleteBinLine />
       </div>
     </li>
   )

@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Item from './Item';
 
 const Todos = () => {
   const items = useSelector(state => state.todos)
-  console.log(Array.isArray(items))
   return (
     <div>
       <ul>
         {
           items.map((todo) => {
-            
+            return <Item id={todo.id} kazi={todo.todo} />
           })
         }
       </ul>
