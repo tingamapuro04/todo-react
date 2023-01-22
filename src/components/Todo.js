@@ -32,7 +32,7 @@ const Todo = () => {
 
   return (
     <div>
-      <h1 className='head'>Organize Your Day with iorganize</h1>
+      <h1 className='head'>Plan Your Day with iorganize</h1>
 
       <form className='form' onSubmit={handleSubmit} action="">
         <input
