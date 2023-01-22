@@ -2,12 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 import { useEffect } from "react"
 const initialState = [];
 
+// const todos = localStorage.getItem('mobutu') !== null ? JSON.parse(localStorage.getItem('mobutu')) : [];
+
+
 const todoSlice = createSlice({
   name: 'todos',
-  initialState,
+  initialState: [],
   reducers: {
     addTodo: (state, action) => {
-      state = action.payload
+      state.push(action.payload)
+      // localStorage.setItem('mobutu', JSON.stringify(state.todos.map(item => item)))
     }
   }
 })

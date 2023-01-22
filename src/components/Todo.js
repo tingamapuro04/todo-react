@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid'
+import { addTodo } from '../features/todo/todoSlice';
 
 
 
 
 const Todo = () => {
-
-  
+  const dispatch = useDispatch()
 
   const [todo, setTodo] = useState("");
   const [todos, setTodos] = useState([])
@@ -14,15 +15,15 @@ const Todo = () => {
     setTodo(e.target.value);
   };
 
-  useEffect(() => {
-    const old_data = JSON.parse(window.localStorage.getItem('Todos'));
-    if (old_data === null) {
-      JSON.stringify(window.localStorage.setItem('Todos', []));
-    }
-  }, [])
+  // useEffect(() => {
+  //   window.localStorage.setItem("Todos", JSON.stringify(todos));
+  // }, [todos]);
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
 
     const moto = {
       id: uniqid(),
@@ -30,15 +31,18 @@ const Todo = () => {
       todo: todo,
     }
 
+    dispatch(addTodo(moto))
     
     setTodo("");
   }
 
-  useEffect(()=>{
-    window.localStorage.setItem('Todos', JSON.stringify(todos))
-  }, [todos])
+  // useEffect(() => {
+  //   const old_data = localStorage.getItem("Todos");
+  //   if (old_data) {
+  //     setTodos(old_data)
+  //   }
+  // }, []);
 
-  
 
 
   return (
