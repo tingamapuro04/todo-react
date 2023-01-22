@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import './Item.scss';
