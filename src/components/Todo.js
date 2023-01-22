@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid'
 import { addTodo } from '../features/todo/todoSlice';
@@ -11,16 +11,12 @@ const Todo = () => {
   const dispatch = useDispatch()
 
   const [todo, setTodo] = useState("");
-  const [todos, setTodos] = useState([])
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
 
-  
-
   const handleSubmit = (e) => {
     e.preventDefault()
-
 
     const moto = {
       id: uniqid(),
