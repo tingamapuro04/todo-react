@@ -1,21 +1,25 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useState, useEffect } from 'react';
 import uniqid from 'uniqid'
-import { addTodo } from '../features/todo/todoSlice';
 
 
 
 
 const Todo = () => {
+
+  
+
   const [todo, setTodo] = useState("");
-  const [value, setValues] = useState({
-    id: '',
-    todo: '',
-  })
-  const dispatch = useDispatch()
+  const [todos, setTodos] = useState([])
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
+
+  useEffect(() => {
+    const old_data = JSON.parse(window.localStorage.getItem('Todos'));
+    if (old_data === null) {
+      JSON.stringify(window.localStorage.setItem('Todos', []));
+    }
+  }, [])
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -25,9 +29,16 @@ const Todo = () => {
       status: false,
       todo: todo,
     }
-    dispatch(addTodo(moto))
-    setTodo("")
+
+    
+    setTodo("");
   }
+
+  useEffect(()=>{
+    window.localStorage.setItem('Todos', JSON.stringify(todos))
+  }, [todos])
+
+  
 
 
   return (

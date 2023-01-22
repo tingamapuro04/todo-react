@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { useEffect } from "react"
 const initialState = [];
 
 const todoSlice = createSlice({
@@ -6,7 +7,7 @@ const todoSlice = createSlice({
   initialState,
   reducers: {
     addTodo: (state, action) => {
-      state.push(action.payload)
+      state = action.payload
     }
   }
 })
