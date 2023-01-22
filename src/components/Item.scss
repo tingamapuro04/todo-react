@@ -1,0 +1,45 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.item {
+  list-style: none;
+  padding-right: 0;
+  transition: all 0.999s;
+  margin: 1% 0 2.5% 0;
+}
+
+.item:hover {
+  transform: scale(1.09);
+}
+
+.todo_div {
+  border-radius: 16px;
+  padding: 3% 2%;
+  background: #d2d7e0;
+  color: #0a6f91;
+  margin-bottom: 1.6%;
+  display: flex;
+  font-size: 1.4rem;
+  box-shadow: 5px 3px #666;
+
+  .para1 {
+    width: 20%;
+    color: #284b63;
+  }
+
+  .para2 {
+    width: 70%;
+  }
+
+  .para3 {
+    width: 10%;
+    fill: #333;
+  }
+
+  .para3:hover {
+    fill: red;
+  }
+}

@@ -1,0 +1,46 @@
+body {
+  margin-top: 3%;
+  width: 100%;
+}
+
+.head {
+  font-family: 'Montserrat', sans-serif;
+  color: #1c3144;
+  margin-bottom: 1.4%;
+}
+
+.form {
+  width: 87%;
+  margin: 1% auto 5% auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  border: none;
+  outline: none;
+
+  .input {
+    width: 80%;
+    font-size: 1.4rem;
+    padding: 1% 1.6%;
+    border: 0.5px solid #369cfe;
+  }
+
+  .input:focus {
+    outline: none;
+    border: none;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    padding: 1.9% 1.6%;
+    outline: none;
+    border: none;
+    background: #369cfe;
+    color: #fff;
+    transition: all 2s;
+  }
+
+  .btn:focus {
+    transform: scale(0.5);
+  }
+}
