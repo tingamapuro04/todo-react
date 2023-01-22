@@ -9,11 +9,11 @@ const Item = ({ id, kazi}) => {
   const mobutu = ind.findIndex(item => item.id === id)
   const dispatch = useDispatch()
   return (
-    <li>
+    <li className='item'>
       <div className='todo_div'>
-        <p>Task {mobutu + 1}</p>
-        <p>{ kazi }</p>
-        <RiDeleteBinLine onClick={() => dispatch(removeTodo(id))} />
+        <p className='para1'>Task {mobutu + 1}:</p>
+        <p className='para2'>{ kazi }</p>
+        <RiDeleteBinLine className='para3' onClick={() => dispatch(removeTodo(id))} />
       </div>
     </li>
   )

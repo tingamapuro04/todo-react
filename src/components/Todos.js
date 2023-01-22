@@ -7,7 +7,7 @@ const Todos = () => {
   const items = useSelector(state => state.todos)
   return (
     <div>
-      <ul>
+      <ul className='order'>
         {
           items.map((todo) => {
             return <Item key={todo.id} id={todo.id} kazi={todo.todo} />
