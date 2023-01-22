@@ -9,7 +9,7 @@ const Todos = () => {
       <ul>
         {
           items.map((todo) => {
-            return <Item id={todo.id} kazi={todo.todo} />
+            return <Item key={todo.id} id={todo.id} kazi={todo.todo} />
           })
         }
       </ul>

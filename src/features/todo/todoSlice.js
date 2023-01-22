@@ -15,9 +15,10 @@ const todoSlice = createSlice({
     },
 
     removeTodo: (state, action) => {
-      let new_item = state.find((item) => item.id === action.payload)
-      const new_data = state.filter((item) => item.id !== action.payload)
-      state = new_data
+      const id = action.payload
+      const existingItem = state.find((item) => item.id  === id)
+      const ind = state.findIndex((item) => item.id === id)
+      const new_state = state.splice(ind, 1)
     }
 
 
