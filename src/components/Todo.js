@@ -32,7 +32,7 @@ const Todo = () => {
 
   return (
     <div>
-      <form onSubmit={handleSubmit} action="">
+      <form  onSubmit={handleSubmit} action="">
         <input value={todo} onChange={handleChange} type="text" name="todo" id="" />
         <input type="submit" value="Add Todo" />
       </form>
