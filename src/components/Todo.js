@@ -1,54 +1,50 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import uniqid from 'uniqid'
+import uniqid from 'uniqid';
 import { addTodo } from '../features/todo/todoSlice';
-import './Todo.scss'
-
-
-
+import './Todo.scss';
 
 const Todo = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-  const [todo, setTodo] = useState("");
+  const [todo, setTodo] = useState('');
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     const moto = {
       id: uniqid(),
       status: false,
-      todo: todo,
-    }
+      todo,
+    };
 
-    dispatch(addTodo(moto))
-    
-    setTodo("");
-  }
+    dispatch(addTodo(moto));
 
+    setTodo('');
+  };
 
   return (
     <div>
-      <h1 className='head'>Plan Your Day with iorganize</h1>
+      <h1 className="head">Plan Your Day with iorganize</h1>
 
-      <form className='form' onSubmit={handleSubmit} action="">
+      <form className="form" onSubmit={handleSubmit} action="">
         <input
-          className='input'
+          className="input"
           value={todo}
           onChange={handleChange}
-          placeholder='Add a Task...'
+          placeholder="Add a Task..."
           type="text"
           name="todo"
           id=""
           required
         />
-        <input className='btn' type="submit" value="Add Task" />
+        <input className="btn" type="submit" value="Add Task" />
       </form>
     </div>
   );
-}
+};
 
-export default Todo
+export default Todo;
