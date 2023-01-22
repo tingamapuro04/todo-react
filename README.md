@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 ## Preview
-<!-- ![](./src/img/crypto.jpeg) -->
+![](./src/img/iorganize.jpeg)
 
 # iOrganize
 
