@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import uniqid from 'uniqid'
 import { addTodo } from '../features/todo/todoSlice';
+import './Todo.scss'
 
 
 
@@ -14,10 +15,6 @@ const Todo = () => {
   const handleChange = (e) => {
     setTodo(e.target.value);
   };
-
-  // useEffect(() => {
-  //   window.localStorage.setItem("Todos", JSON.stringify(todos));
-  // }, [todos]);
 
   
 
@@ -36,23 +33,25 @@ const Todo = () => {
     setTodo("");
   }
 
-  // useEffect(() => {
-  //   const old_data = localStorage.getItem("Todos");
-  //   if (old_data) {
-  //     setTodos(old_data)
-  //   }
-  // }, []);
-
-
 
   return (
     <div>
-      <form  onSubmit={handleSubmit} action="">
-        <input value={todo} onChange={handleChange} type="text" name="todo" id="" />
-        <input type="submit" value="Add Todo" />
+      <h1 className='head'>Organize Your Day with iorganize</h1>
+
+      <form className='form' onSubmit={handleSubmit} action="">
+        <input
+          className='input'
+          value={todo}
+          onChange={handleChange}
+          placeholder='Add a Task...'
+          type="text"
+          name="todo"
+          id=""
+        />
+        <input className='btn' type="submit" value="Add Task" />
       </form>
     </div>
-  )
+  );
 }
 
 export default Todo

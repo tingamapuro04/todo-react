@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import Item from './Item';
+import './Todos.scss'
 
 const Todos = () => {
   const items = useSelector(state => state.todos)
