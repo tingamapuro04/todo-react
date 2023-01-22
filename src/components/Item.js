@@ -8,7 +8,7 @@ const Item = ({ id, kazi}) => {
       <div className='todo_div'>
         <input type="checkbox" name="check" id="" />
         <p>{ kazi }</p>
-        <RiDeleteBinLine />
+        <RiDeleteBinLine onClick={} />
       </div>
     </li>
   )
