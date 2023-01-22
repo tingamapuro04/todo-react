@@ -47,6 +47,7 @@ const Todo = () => {
           type="text"
           name="todo"
           id=""
+          required
         />
         <input className='btn' type="submit" value="Add Task" />
       </form>

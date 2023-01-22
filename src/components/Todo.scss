@@ -9,23 +9,38 @@ body {
 }
 
 .form {
-  width: 95%;
+  width: 87%;
   margin: 1% auto 5% auto;
-  background: #333;
   color: #fff;
   display: flex;
   // justify-content: space-between;
   align-items: center;
   border: none;
+  outline: none;
   .input {
-    flex: 1;
+    width: 80%;
     font-size: 1.4rem;
     padding: 1% 1.6%;
     border: 0.5px solid #369cfe;
   }
+
+  .input:focus {
+    outline: none;
+    border: none;
+  }
+
+  
   .btn {
     font-size: 1.1rem;
-    padding: 1%;
+    padding: 2% 1.6%;
+    outline: none;
     border: none;
+    background: #369cfe;
+    color: #fff;
+    transition: all 1.9s;
+  }
+
+  .btn:focus {
+    transform: scale(0.5);
   }
 }

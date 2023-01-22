@@ -11,7 +11,7 @@ const Item = ({ id, kazi}) => {
   return (
     <li className='item'>
       <div className='todo_div'>
-        <p className='para1'>Task {mobutu + 1}:</p>
+        <p className='para1'>Task{mobutu + 1}:</p>
         <p className='para2'>{ kazi }</p>
         <RiDeleteBinLine className='para3' onClick={() => dispatch(removeTodo(id))} />
       </div>
